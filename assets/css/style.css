@@ -64,3 +64,26 @@ body {
     font-weight: 600;
     text-decoration: underline 2px white;
 }
+
+.guide-box .buttons {
+    height: 70px;
+    display: flex;
+    padding: 10px 40px;
+    border-top: 2.5px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.guide-box .buttons button {
+    cursor: pointer;
+    height: 40px;
+    width: 400px;
+    margin: 10px 10px;
+    border: 2px solid #4fd821;
+    background: black;
+    border-radius: 10px;
+    color:#4fd821;
+    font-weight: 600;
+    font-size: 15px;
+
+}
