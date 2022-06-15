@@ -9,9 +9,11 @@
 
 body {
     background: #2a2b2a;
+    color:#4fd821
 }
 
-.btn-start {
+.btn-start,
+.guide-box {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -19,13 +21,32 @@ body {
 }
 
 .btn-start button{
+    font-family:'Source Code Pro';
     font-size: 20px;
     font-weight: 400;
     color: #4fd821;
     padding: 15px 40px;
     background: black;
     cursor: pointer;
-    border: 1.5px solid #4fd821;
+    border: 2px solid #4fd821;
     border-radius: 15px;
+
+}
+.guide-box {
+    width: 700px;
+    background:#111111;
+    border-radius: 15px;
+
+}
+
+.guide-box .guide-title {
+    font-size: 35px;
+    font-weight: 400;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    padding: 10px 40px;
+    border-bottom: 2.5px solid;
+    align-items: center;
 
 }
