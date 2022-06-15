@@ -48,5 +48,19 @@ body {
     padding: 10px 40px;
     border-bottom: 2.5px solid;
     align-items: center;
+    justify-content: center;
+}
 
+.guide-box .guide-list {
+    padding: 30px 40px;
+}
+.guide-box .guide-list .guide {
+    margin: 5px 0px;
+    font-family: 'Source Code Pro';
+    font-size: large;
+}
+.guide-box .guide-list .guide span {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline 2px white;
 }
