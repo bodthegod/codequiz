@@ -12,7 +12,7 @@ body {
     color:#4fd821
 }
 
-.btn-start, .guide-box {
+.btn-start, .guide-box, .game-area {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -31,10 +31,32 @@ body {
     border-radius: 15px;
 
 }
+.game-area {
+    width: 700px;
+    background:#111111;
+    border-radius: 15px;
+    border: 2px solid #4fd821;
+}
+
+.game-area header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    padding: 0px 40px;
+    border-bottom: 2.5px solid;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+    background:#111111;
+    
+
+}
+
 .guide-box {
     width: 700px;
     background:#111111;
     border-radius: 15px;
+    display: none;
 
 }
 
