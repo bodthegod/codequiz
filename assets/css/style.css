@@ -58,7 +58,10 @@ body {
     justify-content: center;
     font-family: 'Source Code Pro', sans-serif;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
+    padding: 0 10px;
+    border: 2.5px solid #4fd821;
+    border-radius: 15px;
 
 }
 .game-area header #time {
@@ -72,6 +75,13 @@ body {
     background: #2a2b2a;
     border: 2.5px solid #4fd821;
 }
+.game-area header #time #timer-icon {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    
+}
+
 
 .guide-box {
     width: 700px;
