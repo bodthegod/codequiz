@@ -10,7 +10,7 @@
 body {
     background: linear-gradient(-45deg, #48c0ac, #73a128, #adadad, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
     color:#4fd821;
 }
@@ -67,7 +67,7 @@ body {
     background:#111111;
 }
 .game-area header #game-title {
-    width: 250px;
+    width: 300px;
     height: 55px;
     background:#2a2b2a;
     display: flex;
@@ -79,8 +79,11 @@ body {
     padding: 0 10px;
     border: 2.5px solid #4fd821;
     border-radius: 15px;
-
 }
+.game-area header #game-title i {
+    color:white;
+}
+
 .game-area header #time {
     height: 55px;
     width: 250px;
@@ -111,16 +114,46 @@ body {
     text-align: center;
     border-radius: 50%;
     border: 2.5px solid white;
+    
 }
 .game-area section {
     padding: 30px;
-    background:#2a2b2a;
+    background:#111111;
 }
 .game-area section #question-display {
     font-size: 30px;
     font-weight: 700;
     color: white;
     padding: 10px;
+}
+
+.game-area section #answer-select {
+     display: block;
+     padding: 30px 20px;
+}
+.game-area section #answer-select .answer {
+    display: flex;
+    cursor: pointer;
+    background: #2a2b2a;
+    padding: 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 2.5px solid white;
+}
+.game-area section #answer-select .answer:hover {
+    transition: 0.5s ease;
+    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #eee;
+}
+.game-area section #answer-select:last-child {
+    margin-bottom: 5px;
 }
 
 .guide-box {
