@@ -139,7 +139,7 @@ body {
 
 .game-area section #answer-select {
      display: block;
-     padding: 30px 20px;
+     padding: 10px 20px;
 }
 
 .game-area section #answer-select .answer {
@@ -199,6 +199,28 @@ footer #question-count span p {
     padding: 0 6px;
     font-weight: 600;
     font-size: large;
+}
+footer #next-q-button {
+    cursor: pointer;
+    background: #2a2b2a;
+    padding: 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 2.5px solid white;
+    color:white;
+    box-shadow: 0 0 20px #47b124;
+}
+footer #next-q-button:hover {
+    transition: 0.5s ease;
+    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #eee;
 }
 
 
