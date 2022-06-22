@@ -260,7 +260,7 @@ footer #next-q-button:hover {
 
 .guide-box .guide-list .guide {
     margin: 5px 0px;
-    font-family: 'Source Code Pro';
+    font-family: 'Source Code Pro', sans-serif;
     font-size: large;
 }
 
@@ -330,7 +330,28 @@ footer #next-q-button:hover {
     margin: 10px 10px;
     font-size: 95px;
 }
+
 .final-score #finish-icon span {
     color:palevioletred;
     font-size: 80px;
+}
+
+.final-score #finish-title {
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.final-score #finish-result span {
+    font-size: 25px;
+    display: flex;
+    margin: 10px 0;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+#finish-result span p {
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 0px 6px;
 }
