@@ -1,5 +1,7 @@
 /* importing fonts for website */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Source+Code+Pro:wght@500&display=swap');
+
+/* general styles for all content */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
+/* background gradients and general colour in body */
 body {
     background: linear-gradient(-45deg, #48c0ac, #73a128, #adadad, #23d5ab);
 	background-size: 400% 400%;
@@ -36,6 +39,7 @@ body {
     left: 50%;
 }
 
+/* start button styles */
 .btn-start button{
     font-family:'Source Code Pro', sans-serif;
     font-size: 20px;
@@ -48,6 +52,8 @@ body {
     border-radius: 15px;
 
 }
+
+/* game area styles */
 .game-area {
     width: 700px;
     background:#111111;
@@ -66,6 +72,7 @@ body {
     border-radius: 10px 10px 0 0;
     background:#111111;
 }
+
 .game-area header #game-title {
     width: 300px;
     height: 55px;
@@ -80,6 +87,7 @@ body {
     border: 2.5px solid #4fd821;
     border-radius: 15px;
 }
+
 .game-area header #game-title i {
     color:white;
 }
@@ -116,10 +124,12 @@ body {
     border: 2.5px solid white;
     
 }
+
 .game-area section {
     padding: 30px;
     background:#111111;
 }
+
 .game-area section #question-display {
     font-size: 30px;
     font-weight: 700;
@@ -131,6 +141,7 @@ body {
      display: block;
      padding: 30px 20px;
 }
+
 .game-area section #answer-select .answer {
     display: flex;
     cursor: pointer;
@@ -149,6 +160,7 @@ body {
 #answer-select .answer .correct-icon {
     color: #4fd821;
 }
+
 #answer-select .answer .incorrect-icon {
     color: red;
 }
@@ -160,10 +172,22 @@ body {
     text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     box-shadow: 0 0 20px #eee;
 }
+
 .game-area section #answer-select:last-child {
     margin-bottom: 5px;
 }
 
+/* game area footer styles */
+.game-area footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    padding: 5px;   
+}
+
+/* guide box styles */
 .guide-box {
     width: 700px;
     background:#111111;
@@ -186,11 +210,13 @@ body {
 .guide-box .guide-list {
     padding: 30px 40px;
 }
+
 .guide-box .guide-list .guide {
     margin: 5px 0px;
     font-family: 'Source Code Pro';
     font-size: large;
 }
+
 .guide-box .guide-list .guide span {
     color: white;
     font-weight: 600;
@@ -221,6 +247,7 @@ body {
 
 }
 
+
 .buttons button.exit {
     color: red;
     border: 2px solid red;
@@ -231,6 +258,7 @@ body {
     border:3px solid #47b124;
     color:white;
 }
+
 .buttons button.exit:hover{
     background:rgb(196, 19, 19);
     border:3px solid rgb(196, 19, 19);
