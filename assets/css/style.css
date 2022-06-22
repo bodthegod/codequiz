@@ -145,6 +145,14 @@ body {
     border-radius: 15px;
     border: 2.5px solid white;
 }
+
+#answer-select .answer .correct-icon {
+    color: #4fd821;
+}
+#answer-select .answer .incorrect-icon {
+    color: red;
+}
+
 .game-area section #answer-select .answer:hover {
     transition: 0.5s ease;
     background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
