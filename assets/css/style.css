@@ -1,7 +1,7 @@
-/* importing fonts for website */
+/* Importing fonts for website */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Source+Code+Pro:wght@500&display=swap');
 
-/* general styles for all content */
+/* General styles for all content */
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
-/* background gradients and general colour in body */
+/* Background gradients and general colour in body */
 body {
     background: linear-gradient(-45deg, #48c0ac, #73a128, #adadad, #23d5ab);
 	background-size: 400% 400%;
@@ -39,7 +39,7 @@ body {
     left: 50%;
 }
 
-/* start button styles */
+/* Start button styles */
 .btn-start button {
     font-family:'Source Code Pro', sans-serif;
     font-size: 20px;
@@ -50,6 +50,7 @@ body {
     cursor: pointer;
     border: 2px solid #4fd821;
     border-radius: 15px;
+    box-shadow: 0 0 20px #4fd821;
 }
 .btn-start button:hover {
     transition: 0.5s ease;
@@ -60,13 +61,14 @@ body {
     border: 2.5px solid white;
 }
 
-/* game area styles */
+/* Game area styles */
 .game-area {
     width: 700px;
     background:#111111;
     border-radius: 15px;
     border: 2px solid #4fd821;
     display:none;
+    box-shadow: 0 0 20px #4fd821;
 }
 
 .game-area header {
@@ -185,7 +187,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* game area footer styles */
+/* Game area footer styles */
 .game-area footer {
     display: flex;
     justify-content: space-evenly;
@@ -209,7 +211,7 @@ footer #question-count span p {
     font-size: large;
 }
 
-/* next button */
+/* Next button */
 footer #next-q-button {
     cursor: pointer;
     background: #2a2b2a;
@@ -234,12 +236,13 @@ footer #next-q-button:hover {
 }
 
 
-/* guide box styles */
+/* Guide box at start styles */
 .guide-box {
     width: 700px;
     background:#111111;
     border-radius: 15px;
     display: none;
+    box-shadow: 0 0 20px #4fd821;
 }
 
 .guide-box .guide-title {
@@ -311,7 +314,7 @@ footer #next-q-button:hover {
     border:3px solid rgb(196, 19, 19);
     color:white;
 }
-
+/* End score results box  */
 .final-score {
     display: flex;
     flex-direction: column;
@@ -323,6 +326,7 @@ footer #next-q-button:hover {
     border-radius: 15px;
     border: 3px solid #4fd821;
     padding: 30px 55px;
+    box-shadow: 0 0 20px #4fd821;
 }
 
 .final-score #finish-icon {
@@ -354,4 +358,45 @@ footer #next-q-button:hover {
     font-weight: 700;
     color: white;
     padding: 0px 6px;
+}
+
+/* Final score box buttons with gradient styles and hover effects */
+.final-score .buttons button {
+    cursor: pointer;
+    height: 40px;
+    width: 400px;
+    margin: 10px 10px;
+    border: 2px solid #4fd821;
+    border-radius: 10px;
+    color:#4fd821;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 15px;
+}
+
+.final-score .buttons .restart {
+    background:#47b124;
+    border: 1.5px solid white;
+    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+    color: white;
+
+}
+
+.final-score .buttons .restart:hover {
+    transition: 0.5s ease;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #4fd821;
+}
+
+.final-score .buttons .exit {
+    background:#d82121;
+    border: 1.5px solid white;
+    background: linear-gradient(90deg, var(--c1, #d82121), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+    color: white;
+}
+
+.final-score .buttons .exit:hover {
+    transition: 0.5s ease;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #d82121;
 }
