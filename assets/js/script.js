@@ -30,9 +30,10 @@ function displayQuestion(index){
     const question_display = document.querySelector("#question-display");
     const answer_select = document.querySelector("#answer-select");
     let question_text = '<span>'+ qdata[index].qname + '</span>';
-    let answer_text = '<div class="answer"><span></span></div>'
-                    + '<div class="answer"><span></span></div>'
-                    + '<div class="answer"><span></span></div>'
+    let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'
+                    + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
+                    + '<div class="answer">' + qdata[index].qselection[2] + '<span></span></div>'
                     + '<div class="answer"><span></span></div>'
     question_display.innerHTML = question_text;
+    answer_select.innerHTML = answer_text;
 }
