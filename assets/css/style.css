@@ -67,7 +67,9 @@ body {
     background:#111111;
     border-radius: 15px;
     border: 2px solid #4fd821;
-    display:none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
     box-shadow: 0 0 20px #4fd821;
 }
 
@@ -195,20 +197,21 @@ body {
     width: 100%;
     align-items: center;
     padding: 5px;   
+    border-top: #4fd821;
 }
 
 .game-area footer #question-count span {
     user-select: none;
     display: flex;
     font-family: 'Source Code Pro', sans-serif;
-    font-size: large;
+    font-size: 25px;
 }
 
 footer #question-count span p {
     color: white;
     padding: 0 6px;
     font-weight: 600;
-    font-size: large;
+    font-size: 25px;
 }
 
 /* Next button */
@@ -241,8 +244,17 @@ footer #next-q-button:hover {
     width: 700px;
     background:#111111;
     border-radius: 15px;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
     box-shadow: 0 0 20px #4fd821;
+}
+/* Shows box when js onclick is active and specifies max stack order  */
+.guide-box.showBox {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 5;
+    transform: translate(-50%, -50%);
 }
 
 .guide-box .guide-title {
@@ -327,6 +339,9 @@ footer #next-q-button:hover {
     border: 3px solid #4fd821;
     padding: 30px 55px;
     box-shadow: 0 0 20px #4fd821;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
 }
 
 .final-score #finish-icon {
