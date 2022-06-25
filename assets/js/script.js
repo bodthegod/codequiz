@@ -20,20 +20,36 @@ btn_continue.onclick = ()=>{
     guide_box.classList.remove("showBox");
     game_area.classList.add("showGame");
 // calls displayQuestion function
-    displayQuestion(3);
+    displayQuestion(0);
 }
 
 let question_counter = 0;
+
+// next question button
+const next_q = game_area.querySelector("#next-q-button");
+
+next_q.onclick = ()=>{
+// increments question counter by +1
+    if(question_counter < qdata.length - 1){
+        question_counter++;
+        displayQuestion(question_counter);
+    }else{
+        console.log("Finished Quiz!")
+    }
+
+}
 
 //function to display questions
 function displayQuestion(index){
     const question_display = document.querySelector("#question-display");
     const answer_select = document.querySelector("#answer-select");
+    // displays question text from qdata js file
     let question_text = '<span>'+ qdata[index].qname + '</span>';
+    // displays answers from qdata js file 
     let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'
                     + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
                     + '<div class="answer">' + qdata[index].qselection[2] + '<span></span></div>'
-                    + '<div class="answer"><span></span></div>'
+                    + '<div class="answer">' + qdata[index].qselection[3] +'<span></span></div>'
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
 }
