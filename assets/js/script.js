@@ -36,7 +36,6 @@ next_q.onclick = ()=>{
     }else{
         console.log("Finished Quiz!")
     }
-
 }
 
 //function to display questions
@@ -44,7 +43,7 @@ function displayQuestion(index){
     const question_display = document.querySelector("#question-display");
     const answer_select = document.querySelector("#answer-select");
     // displays question text from qdata js file
-    let question_text = '<span>'+ qdata[index].qname + '</span>';
+    let question_text = '<span>'+ qdata[index].qnumber + "." + qdata[index].qname + '</span>';
     // displays answers from qdata js file 
     let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'
                     + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
@@ -53,3 +52,7 @@ function displayQuestion(index){
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
 }
+
+const question_of_count = game_area.querySelector("#question-counter")
+let questionNumber = '<span><p>' + question_counter + '</p>Out of<p>' + qdata.length + '</p></span>';
+question_of_count.innerHTML = questionNumber;
