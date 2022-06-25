@@ -55,7 +55,12 @@ function displayQuestion(index){
                     + '<div class="answer">' + qdata[index].qselection[3] +'<span></span></div>'
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
+    const answer = answer_select.querySelectorAll(".answer");
+    for (let i = 0; i < answer.length; i++) {
+        answer[i].setAttribute("onclick", "answerChosen(this)");
+    }
 }
+// creates innerhtml to display question counter
 function createQuestionCounter(index){
 const question_of_count = game_area.querySelector("#question-count");
 let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
