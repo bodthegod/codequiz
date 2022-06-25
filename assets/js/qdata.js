@@ -58,13 +58,13 @@ let qdata = [
     },
     {
         qnumber: 6,
-        qname: "Which of these elements are all <table> elements?",
-        qanswer: "<table><tr><td>",
+        qname: "How do you change the text color of an element?",
+        qanswer: "color:",
         qselection: [
-            "<table><body>",
-            "<tt><tablefooter>",
-            "<table><tr><td>",
-            "<head><tr>",
+            'colortext:',
+            'color:',
+            'background-color:',
+            'textcolor=',
         ]
     },
     {
