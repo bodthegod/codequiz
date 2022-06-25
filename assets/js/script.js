@@ -21,9 +21,11 @@ btn_continue.onclick = ()=>{
     game_area.classList.add("showGame");
 // calls displayQuestion function
     displayQuestion(0);
+    createQuestionCounter(1);
 }
 
 let question_counter = 0;
+let question_integer = 1;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
@@ -32,7 +34,9 @@ next_q.onclick = ()=>{
 // increments question counter by +1
     if(question_counter < qdata.length - 1){
         question_counter++;
+        question_integer++;
         displayQuestion(question_counter);
+        createQuestionCounter(question_integer);
     }else{
         console.log("Finished Quiz!")
     }
@@ -52,7 +56,8 @@ function displayQuestion(index){
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
 }
-
-const question_of_count = game_area.querySelector("#question-counter")
-let questionNumber = '<span><p>' + question_counter + '</p>Out of<p>' + qdata.length + '</p></span>';
+function createQuestionCounter(index){
+const question_of_count = game_area.querySelector("#question-count");
+let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
 question_of_count.innerHTML = questionNumber;
+}
