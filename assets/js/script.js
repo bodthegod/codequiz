@@ -60,6 +60,10 @@ function displayQuestion(index){
         answer[i].setAttribute("onclick", "answerChosen(this)");
     }
 }
+
+let incorrectI = '<div class="incorrect-icon"><i class="fa-regular fa-circle-xmark"></i></div>'
+let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check"></i></div>'
+
 // function to log correct and incorrect answers
 function answerChosen(option){
     let userOption = option.textContent;
@@ -68,14 +72,17 @@ function answerChosen(option){
     if(userOption === rightOption){
         option.classList.add("correct");
         console.log("You got it right!");
+        option.insertAdjacentHTML("beforeend", correctI);
     }else{
         option.classList.add("incorrect");
         console.log("Wrong Answer");
+        option.insertAdjacentHTML("beforeend", incorrectI);
     }
     // display correct answer upon incorrect choice
     for (let i = 0; i < allOptions; i++) {
         if(answer_select.children[i].textContent == rightOption) {
             answer_select.children[i].setAttribute("class", "answer correct");
+            answer_select.children[i].insertAdjacentHTML("beforeend", correctI);
         }
     }
 
