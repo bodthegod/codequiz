@@ -208,6 +208,10 @@ body {
     box-shadow: 0 0 20px red;
 }
 
+#answer-select .answer.muted{
+    pointer-events: none;
+}
+
 .game-area section #answer-select:last-child {
     margin-bottom: 3px;
 }
