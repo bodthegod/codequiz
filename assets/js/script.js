@@ -60,13 +60,16 @@ function displayQuestion(index){
         answer[i].setAttribute("onclick", "answerChosen(this)");
     }
 }
+// function to log correct and incorrect answers
 function answerChosen(option){
     let userOption = option.textContent;
     let rightOption = qdata[question_counter].qanswer;
     if(userOption === rightOption){
-        console.log("You got it right!")
+        option.classList.add("correct");
+        console.log("You got it right!");
     }else{
-        console.log("Wrong Answer")
+        option.classList.add("incorrect");
+        console.log("Wrong Answer");
     }
     
 }
