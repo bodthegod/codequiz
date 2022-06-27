@@ -72,6 +72,14 @@ function answerChosen(option){
         option.classList.add("incorrect");
         console.log("Wrong Answer");
     }
+    // display correct answer upon incorrect choice
+    for (let i = 0; i < allOptions; i++) {
+        if(answer_select.children[i].textContent == rightOption) {
+            answer_select.children[i].setAttribute("class", "answer correct");
+        }
+    }
+
+    // adds muted class to prevent further answer selections
     for (let i = 0; i < allOptions; i++) {
         answer_select.children[i].classList.add("muted");
     }
