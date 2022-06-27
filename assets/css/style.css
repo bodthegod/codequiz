@@ -191,6 +191,22 @@ body {
     text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     box-shadow: 0 0 20px #eee;
 }
+/* correct answer styles */
+#answer-select .answer.correct {
+    transition: 0.5s ease;
+    background: linear-gradient(90deg, var(--c1, green), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px green;
+}
+/* incorrect answer styles */
+#answer-select .answer.incorrect {
+    transition: 0.5s ease;
+    background: linear-gradient(90deg, var(--c1, red), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px red;
+}
 
 .game-area section #answer-select:last-child {
     margin-bottom: 3px;

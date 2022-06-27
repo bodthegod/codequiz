@@ -2,6 +2,7 @@
 const btn_start = document.querySelector(".btn-start button");
 const guide_box = document.querySelector(".guide-box");
 const game_area = document.querySelector(".game-area");
+const answer_select = document.querySelector("#answer-select");
 const btn_exit = guide_box.querySelector(".buttons .exit");
 const btn_continue = document.querySelector(".buttons .restart");
 
@@ -45,7 +46,6 @@ next_q.onclick = ()=>{
 //function to display questions
 function displayQuestion(index){
     const question_display = document.querySelector("#question-display");
-    const answer_select = document.querySelector("#answer-select");
     // displays question text from qdata js file
     let question_text = '<span>'+ qdata[index].qnumber + "." + qdata[index].qname + '</span>';
     // displays answers from qdata js file 
@@ -64,6 +64,7 @@ function displayQuestion(index){
 function answerChosen(option){
     let userOption = option.textContent;
     let rightOption = qdata[question_counter].qanswer;
+    let allOptions = answer_select.children.length;
     if(userOption === rightOption){
         option.classList.add("correct");
         console.log("You got it right!");
@@ -71,7 +72,9 @@ function answerChosen(option){
         option.classList.add("incorrect");
         console.log("Wrong Answer");
     }
-    
+    for (let i = 0; i < allOptions; i++) {
+        answer_select.children[i].classList.add("muted");
+    }
 }
 // creates innerhtml to display question counter
 function createQuestionCounter(index){
