@@ -60,6 +60,10 @@ function displayQuestion(index){
         answer[i].setAttribute("onclick", "answerChosen(this)");
     }
 }
+function answerChosen(option){
+    let userOption = option.textContent;
+    console.log(answerChosen);
+}
 // creates innerhtml to display question counter
 function createQuestionCounter(index){
 const question_of_count = game_area.querySelector("#question-count");
