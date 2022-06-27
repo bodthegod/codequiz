@@ -62,7 +62,13 @@ function displayQuestion(index){
 }
 function answerChosen(option){
     let userOption = option.textContent;
-    console.log(answerChosen);
+    let rightOption = qdata[question_counter].qanswer;
+    if(userOption === rightOption){
+        console.log("You got it right!")
+    }else{
+        console.log("Wrong Answer")
+    }
+    
 }
 // creates innerhtml to display question counter
 function createQuestionCounter(index){
