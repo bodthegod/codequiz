@@ -2,6 +2,7 @@
 const btn_start = document.querySelector(".btn-start button");
 const guide_box = document.querySelector(".guide-box");
 const game_area = document.querySelector(".game-area");
+const progress_bar = game_area.querySelector("footer .progress-bar")
 const answer_select = document.querySelector("#answer-select");
 const btn_exit = guide_box.querySelector(".buttons .exit");
 const btn_continue = document.querySelector(".buttons .restart");
@@ -26,12 +27,14 @@ btn_continue.onclick = ()=>{
     displayQuestion(0);
     createQuestionCounter(1);
     timerStart(5);
+    progressTimerStart(0);
 }
 
 let question_counter = 0;
 let question_integer = 1;
 let timer;
 let timerRepeat = 5;
+let progressStatus = 0;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
@@ -45,6 +48,8 @@ next_q.onclick = ()=>{
         createQuestionCounter(question_integer);
         clearInterval(timer);
         timerStart(timerRepeat);
+        clearInterval(progressTimer);
+        progressTimerStart(progressStatus);
     }else{
         console.log("Finished Quiz!")
     }
@@ -113,6 +118,17 @@ function timerStart(time){
         if(time < 0){
             clearInterval(timer);
             timer_count.textContent = "0";
+        }
+    }
+}
+
+function progressTimerStart(time){
+    progressTimer = setInterval(timerCount, 9.25);
+    function timerCount(){
+        time +=1;
+        progress_bar.style.width = time + "px";
+        if(time > 695){
+            clearInterval(progressTimer);
         }
     }
 }
