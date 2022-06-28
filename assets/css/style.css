@@ -224,7 +224,6 @@ body {
     width: 100%;
     align-items: center;
     padding: 0px;   
-    border-top: 1.5px solid white;
 }
 .game-area footer .progress-bar {
     position:absolute;
@@ -264,6 +263,7 @@ footer #next-q-button {
     border: 2.5px solid white;
     color:white;
     box-shadow: 0 0 20px #47b124;
+    display: none;
 }
 footer #next-q-button:hover {
     transition: 0.5s ease;
