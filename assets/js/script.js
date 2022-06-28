@@ -38,6 +38,9 @@ let progressStatus = 0;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
+const replay_game = final_score.querySelector(".buttons .restart");
+const exit_game = final_score.querySelector(".buttons .exit");
+const final_score = document.querySelector(".final-score");
 
 next_q.onclick = ()=>{
 // increments question counter by +1
@@ -50,6 +53,7 @@ next_q.onclick = ()=>{
         timerStart(timerRepeat);
         clearInterval(progressTimer);
         progressTimerStart(progressStatus);
+        next_q.style.display = "none";
     }else{
         console.log("Finished Quiz!")
     }
