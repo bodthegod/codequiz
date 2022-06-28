@@ -79,6 +79,7 @@ let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check">
 // function to log correct and incorrect answers
 function answerChosen(option){
     clearInterval(timer);
+    clearInterval(progressTimer);
     let userOption = option.textContent;
     let rightOption = qdata[question_counter].qanswer;
     let allOptions = answer_select.children.length;
@@ -102,6 +103,7 @@ function answerChosen(option){
     for (let i = 0; i < allOptions; i++) {
         answer_select.children[i].classList.add("muted");
     }
+    next_q.style.display = "block";
 }
 // creates innerhtml to display question counter
 function createQuestionCounter(index){
