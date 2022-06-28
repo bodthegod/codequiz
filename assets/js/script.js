@@ -110,5 +110,9 @@ function timerStart(time){
     function timerCount(){
         timer_count.textContent = time;
         time--;
+        if(time < 0){
+            clearInterval(timer);
+            timer_count.textContent = "0";
+        }
     }
 }
