@@ -5,6 +5,8 @@ const game_area = document.querySelector(".game-area");
 const answer_select = document.querySelector("#answer-select");
 const btn_exit = guide_box.querySelector(".buttons .exit");
 const btn_continue = document.querySelector(".buttons .restart");
+const timer_count = game_area.querySelector("#time #timer-count")
+
 
 // start button onclick function
 btn_start.onclick = ()=>{
@@ -23,10 +25,12 @@ btn_continue.onclick = ()=>{
 // calls displayQuestion function
     displayQuestion(0);
     createQuestionCounter(1);
+    timerStart(5);
 }
 
 let question_counter = 0;
 let question_integer = 1;
+let timer;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
@@ -61,8 +65,8 @@ function displayQuestion(index){
     }
 }
 
-let incorrectI = '<div class="incorrect-icon"><i class="fa-regular fa-circle-xmark"></i></div>'
-let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check"></i></div>'
+let incorrectI = '<div class="incorrect-icon"><i class="fa-regular fa-circle-xmark"></i></div>';
+let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check"></i></div>';
 
 // function to log correct and incorrect answers
 function answerChosen(option){
@@ -82,7 +86,6 @@ function answerChosen(option){
     for (let i = 0; i < allOptions; i++) {
         if(answer_select.children[i].textContent == rightOption) {
             answer_select.children[i].setAttribute("class", "answer correct");
-            answer_select.children[i].insertAdjacentHTML("beforeend", correctI);
         }
     }
 
@@ -96,4 +99,12 @@ function createQuestionCounter(index){
 const question_of_count = game_area.querySelector("#question-count");
 let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
 question_of_count.innerHTML = questionNumber;
+}
+
+function timerStart(time){
+    timer = setInterval(timerCount, 1000);
+    function timerCount(){
+        timer_count.textContent = time;
+        time--;
+    }
 }
