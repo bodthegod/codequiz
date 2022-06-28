@@ -31,6 +31,7 @@ btn_continue.onclick = ()=>{
 let question_counter = 0;
 let question_integer = 1;
 let timer;
+let timerRepeat = 5;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
@@ -42,6 +43,8 @@ next_q.onclick = ()=>{
         question_integer++;
         displayQuestion(question_counter);
         createQuestionCounter(question_integer);
+        clearInterval(timer);
+        timerStart(timerRepeat);
     }else{
         console.log("Finished Quiz!")
     }
@@ -70,6 +73,7 @@ let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check">
 
 // function to log correct and incorrect answers
 function answerChosen(option){
+    clearInterval(timer);
     let userOption = option.textContent;
     let rightOption = qdata[question_counter].qanswer;
     let allOptions = answer_select.children.length;
