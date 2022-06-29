@@ -154,9 +154,22 @@ function timerStart(time){
         if(time < 0){
             clearInterval(timer);
             timer_count.textContent = "0";
+
+            let rightOption = qdata[question_counter].qanswer;
+            let allOptions = answer_select.children.length;
+        
+            for (let i = 0; i < allOptions; i++) {
+                if(answer_select.children[i].textContent == rightOption) {
+                    answer_select.children[i].setAttribute("class", "answer correct");
+                }
+                }
+                for (let i = 0; i < allOptions; i++) {
+                    answer_select.children[i].classList.add("muted");
+                }
+                next_q.style.display = "block";
+            }
         }
     }
-}
 
 function displayFinalScore(){
     guide_box.classList.remove("showBox");
