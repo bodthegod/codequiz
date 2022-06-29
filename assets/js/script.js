@@ -2,22 +2,22 @@
 const btn_start = document.querySelector(".btn-start button");
 const guide_box = document.querySelector(".guide-box");
 const game_area = document.querySelector(".game-area");
-const progress_bar = game_area.querySelector("footer .progress-bar")
+const progress_bar = game_area.querySelector("footer .progress-bar");
 const answer_select = document.querySelector("#answer-select");
 const btn_exit = guide_box.querySelector(".buttons .exit");
 const btn_continue = document.querySelector(".buttons .restart");
-const timer_count = game_area.querySelector("#time #timer-count")
+const timer_count = game_area.querySelector("#time #timer-count");
 
 
 // start button onclick function
 btn_start.onclick = ()=>{
     guide_box.classList.add("showBox");
-}
+};
 
 // exit button onclick function
 btn_exit.onclick = ()=>{
     guide_box.classList.remove("showBox");
-}
+};
 
 // continue button onclick function
 btn_continue.onclick = ()=>{
@@ -28,7 +28,7 @@ btn_continue.onclick = ()=>{
     createQuestionCounter(1);
     timerStart(5);
     progressTimerStart(0);
-}
+};
 
 let question_counter = 0;
 let question_integer = 1;
@@ -47,7 +47,7 @@ const exit_game = final_score.querySelector(".final-score .buttons .exit");
 // exit game when clicked 
 exit_game.onclick = ()=>{
     window.location.reload();
-}
+};
 // replay game when clicked 
 replay_game.onclick = ()=>{
     game_area.classList.add("showGame");
@@ -64,7 +64,7 @@ replay_game.onclick = ()=>{
     progressTimerStart(progressStatus);
     next_q.style.display = "none";
     createQuestionCounter(question_integer);
-}
+};
 
 next_q.onclick = ()=>{
 // increments question counter by +1
@@ -81,10 +81,10 @@ next_q.onclick = ()=>{
     }else{
         clearInterval(timer);
         clearInterval(progressTimer);
-        console.log("Finished Quiz!")
+        console.log("Finished Quiz!");
         displayFinalScore();
     }
-}
+};
 
 //function to display questions
 function displayQuestion(index){
@@ -92,10 +92,9 @@ function displayQuestion(index){
     // displays question text from qdata js file
     let question_text = '<span>'+ qdata[index].qnumber + "." + qdata[index].qname + '</span>';
     // displays answers from qdata js file 
-    let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'
-                    + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
+    let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'  + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
                     + '<div class="answer">' + qdata[index].qselection[2] + '<span></span></div>'
-                    + '<div class="answer">' + qdata[index].qselection[3] +'<span></span></div>'
+                    + '<div class="answer">' + qdata[index].qselection[3] + '<span></span></div>'; // Line breaks used to break up information
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
     const answer = answer_select.querySelectorAll(".answer");
@@ -177,15 +176,15 @@ function displayFinalScore(){
     final_score.classList.add("showScore");
     const final_score_num = final_score.querySelector("#finish-result");
     if(finalScore > 8){
-        let scoreText = '<span>Great! You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        let scoreText = '<span>Great! You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
     }
     else if (finalScore > 5){
-        let scoreText = '<span>Good Job, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        let scoreText = '<span>Good Job, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
     }
     else {
-        let scoreText = '<span>Nice try, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        let scoreText = '<span>Nice try, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
     }
 }
