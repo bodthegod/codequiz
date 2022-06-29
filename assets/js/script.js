@@ -33,6 +33,7 @@ btn_continue.onclick = ()=>{
 let question_counter = 0;
 let question_integer = 1;
 let timer;
+let progressTimer;
 let timerRepeat = 5;
 let progressStatus = 0;
 let finalScore = 0;
@@ -42,6 +43,16 @@ const next_q = game_area.querySelector("#next-q-button");
 const final_score = document.querySelector(".final-score");
 const replay_game = final_score.querySelector(".final-score .buttons .start-again");
 const exit_game = final_score.querySelector(".final-score .buttons .exit");
+
+// exit game when clicked 
+exit_game.onclick = ()=>{
+    window.location.reload();
+}
+// replay game when clicked 
+replay_game.onclick = ()=>{
+    game_area.classList.add("showGame");
+    final_score.classList.remove("showScore");
+}
 
 next_q.onclick = ()=>{
 // increments question counter by +1
