@@ -137,6 +137,11 @@ function displayFinalScore(){
     guide_box.classList.remove("showBox");
     game_area.classList.remove("showGame");
     final_score.classList.add("showScore");
+    const final_score_num = final_score.querySelector("#finish-result");
+    if(finalScore > 1){
+        let scoreText = '<span>You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        final_score_num.innerHTML = scoreText;
+    }
 }
 
 function progressTimerStart(time){
