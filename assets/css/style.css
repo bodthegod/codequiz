@@ -11,7 +11,7 @@
 
 /* Background gradients and general colour in body */
 body {
-    background: linear-gradient(-45deg, #48c0ac, #73a128, #adadad, #23d5ab);
+    background: linear-gradient(-45deg, #48c0ac, #73a128, #ebadad, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 	height: 100vh;
@@ -31,6 +31,7 @@ body {
 
     
 }
+
 
 .btn-start, .guide-box, .game-area, .final-score{
     transition: all 0.5s ease;
@@ -194,6 +195,7 @@ body {
     box-shadow: 0 0 20px #eee;
 }
 /* correct answer styles */
+
 #answer-select .answer.correct {
     transition: 0.5s ease;
     background: linear-gradient(90deg, var(--c1, green), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
@@ -399,7 +401,7 @@ footer #next-q-button:hover {
 }
 
 .final-score #finish-result span {
-    font-size: 25px;
+    font-size: 15px;
     display: flex;
     margin: 10px 0;
     font-family: 'Source Code Pro', sans-serif;
@@ -426,29 +428,27 @@ footer #next-q-button:hover {
     font-size: 15px;
 }
 
-.final-score .buttons .restart {
-    background:#47b124;
-    border: 1.5px solid white;
-    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
-    color: white;
+.final-score .buttons .start-again {
+    border: 2px solid #47b124;
+    background: black;
+    color: #47b124;
 
 }
 
-.final-score .buttons .restart:hover {
-    transition: 0.5s ease;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px #4fd821;
+.final-score .buttons .start-again:hover {
+    background:#47b124;
+    border:3px solid #47b124;
+    color:white;
 }
 
 .final-score .buttons .exit {
-    background:#d82121;
-    border: 1.5px solid white;
-    background: linear-gradient(90deg, var(--c1, #d82121), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
-    color: white;
+    color: red;
+    border: 2px solid red;
+    background:black;
 }
 
 .final-score .buttons .exit:hover {
-    transition: 0.5s ease;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px #d82121;
+    background:rgb(196, 19, 19);
+    border:3px solid rgb(196, 19, 19);
+    color:white;
 }
