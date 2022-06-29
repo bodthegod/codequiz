@@ -50,7 +50,7 @@ let qdata = [
         qname: "How do you create rounded corners in CSS?",
         qanswer: "border-radius: 15px;",
         qselection: [
-            "border-radius: 15px",
+            "border-radius: 15px;",
             "corner-round;",
             "object-rounded: yes;",
             "None",
