@@ -52,6 +52,18 @@ exit_game.onclick = ()=>{
 replay_game.onclick = ()=>{
     game_area.classList.add("showGame");
     final_score.classList.remove("showScore");
+    question_counter = 0;
+    question_integer = 1;
+    timerRepeat = 5;
+    progressStatus = 0;
+    finalScore = 0;
+    displayQuestion(question_counter);
+    clearInterval(timer);
+    timerStart(timerRepeat);
+    clearInterval(progressTimer);
+    progressTimerStart(progressStatus);
+    next_q.style.display = "none";
+    createQuestionCounter(question_integer);
 }
 
 next_q.onclick = ()=>{
@@ -67,6 +79,8 @@ next_q.onclick = ()=>{
         progressTimerStart(progressStatus);
         next_q.style.display = "none";
     }else{
+        clearInterval(timer);
+        clearInterval(progressTimer);
         console.log("Finished Quiz!")
         displayFinalScore();
     }
