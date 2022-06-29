@@ -138,11 +138,20 @@ function displayFinalScore(){
     game_area.classList.remove("showGame");
     final_score.classList.add("showScore");
     const final_score_num = final_score.querySelector("#finish-result");
-    if(finalScore > 1){
-        let scoreText = '<span>You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+    if(finalScore > 8){
+        let scoreText = '<span>Great! You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        final_score_num.innerHTML = scoreText;
+    }
+    else if (finalScore > 5){
+        let scoreText = '<span>Good Job, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
+        final_score_num.innerHTML = scoreText;
+    }
+    else {
+        let scoreText = '<span>Nice try, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>'
         final_score_num.innerHTML = scoreText;
     }
 }
+
 
 function progressTimerStart(time){
     progressTimer = setInterval(timerCount, 9.25);
