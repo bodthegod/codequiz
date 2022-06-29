@@ -38,9 +38,9 @@ let progressStatus = 0;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
-const replay_game = final_score.querySelector(".buttons .restart");
-const exit_game = final_score.querySelector(".buttons .exit");
 const final_score = document.querySelector(".final-score");
+const replay_game = final_score.querySelector(".final-score .buttons .start-again");
+const exit_game = final_score.querySelector(".final-score .buttons .exit");
 
 next_q.onclick = ()=>{
 // increments question counter by +1
@@ -56,6 +56,7 @@ next_q.onclick = ()=>{
         next_q.style.display = "none";
     }else{
         console.log("Finished Quiz!")
+        displayFinalScore();
     }
 }
 
@@ -109,6 +110,7 @@ function answerChosen(option){
     }
     next_q.style.display = "block";
 }
+
 // creates innerhtml to display question counter
 function createQuestionCounter(index){
 const question_of_count = game_area.querySelector("#question-count");
@@ -128,6 +130,12 @@ function timerStart(time){
     }
 }
 
+function displayFinalScore(){
+    guide_box.classList.remove("showBox");
+    game_area.classList.remove("showGame");
+    final_score.classList.add("showScore");
+}
+
 function progressTimerStart(time){
     progressTimer = setInterval(timerCount, 9.25);
     function timerCount(){
@@ -138,3 +146,4 @@ function progressTimerStart(time){
         }
     }
 }
+
