@@ -103,7 +103,7 @@ let qdata = [
     {
         qnumber: 10,
         qname: "The SCRIPT tag allows you to link to which programming language?",
-        qanswer: "Javascript",
+        qanswer: "JavaScript",
         qselection: [
             "JavaScript",
             "SQL",
