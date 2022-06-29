@@ -147,24 +147,24 @@ body {
     
 }
 
-.game-area section {
+.game-area .question-section {
     padding: 30px;
     background:#111111;
 }
 
-.game-area section #question-display {
+.game-area .question-section #question-display {
     font-size: 30px;
     font-weight: 700;
     color: white;
     padding: 10px;
 }
 
-.game-area section #answer-select {
+.game-area .question-section #answer-select {
      display: block;
      padding: 10px 20px;
 }
 
-.game-area section #answer-select .answer {
+.game-area .question-section #answer-select .answer {
     display: flex;
     cursor: pointer;
     background: #2a2b2a;
@@ -187,7 +187,7 @@ body {
     color: red;
 }
 
-.game-area section #answer-select .answer:hover {
+.game-area .question-section #answer-select .answer:hover {
     transition: 0.5s ease;
     background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
     color: white;
@@ -216,7 +216,7 @@ body {
     pointer-events: none;
 }
 
-.game-area section #answer-select:last-child {
+.game-area .question-section #answer-select:last-child {
     margin-bottom: 3px;
 }
 
