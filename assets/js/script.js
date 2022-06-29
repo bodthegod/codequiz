@@ -35,6 +35,7 @@ let question_integer = 1;
 let timer;
 let timerRepeat = 5;
 let progressStatus = 0;
+let finalScore = 0;
 
 // next question button
 const next_q = game_area.querySelector("#next-q-button");
@@ -89,6 +90,8 @@ function answerChosen(option){
     let rightOption = qdata[question_counter].qanswer;
     let allOptions = answer_select.children.length;
     if(userOption === rightOption){
+        finalScore += 1;
+        console.log(finalScore);
         option.classList.add("correct");
         console.log("You got it right!");
         option.insertAdjacentHTML("beforeend", correctI);
