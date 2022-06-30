@@ -16,6 +16,7 @@ body {
 	animation: gradient 10s ease infinite;
 	height: 100vh;
     color:#4fd821;
+    width:100%;
 }
 
 @keyframes gradient {
@@ -39,6 +40,7 @@ body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    margin:auto;
 }
 
 /* Start button styles */
@@ -53,6 +55,7 @@ body {
     border: 2px solid #4fd821;
     border-radius: 15px;
     box-shadow: 0 0 20px #4fd821;
+    width:400px;
 }
 .btn-start button:hover {
     transition: 0.5s ease;
@@ -451,4 +454,86 @@ footer #next-q-button:hover {
     background:rgb(196, 19, 19);
     border:3px solid rgb(196, 19, 19);
     color:white;
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+    body {
+        background: rgb(122, 224, 255);
+        width:100vw;
+        font-size: 15px;
+    }
+    .btn-start button{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        top: 50%;
+        left: 50%;
+        margin: auto;
+    }
+    .game-area {
+        width: 375px;
+        background:#111111;
+        border-radius: 15px;
+        border: 2px solid #4fd821;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 20px #4fd821;
+    }
+    .game-area header {
+        height:80px;
+        width:370px;
+        z-index: 1;
+        font-size: 15px;
+    }
+    .game-area header #game-title {
+        font-size: 12px;
+        padding-right: 2px;
+        margin: 10px;
+    }
+
+    .game-area header #time #timer-icon {
+        font-size: 12px;
+        padding-right: 2px;
+    }
+    .game-area #question-display {
+        font-size: 15px !important;
+    }
+    .game-area #answer-select {
+        padding: 10px 0;
+    }
+    .game-area #answer-select .answer{
+        padding: 5px 10px !important;
+        margin-bottom: 5px!important;
+        font-size: 10px!important;
+        align-items: center!important;
+        justify-content: space-between!important;
+    }
+    .game-area footer {
+        font-size: 15px;
+    }
+    footer .progress-bar {
+        display: none;
+    }
+    .guide-box{
+        width: 100%;
+        height: 500px;
+        font-size: 15px;
+    }
+    .guide-box.showBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin:auto;
+    }
+    .guide-box .guide-title{
+        font-size:20px;
+    }
+    .final-score {
+        width:100%;
+    }
 }
