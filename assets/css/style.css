@@ -537,6 +537,7 @@ footer #next-q-button:hover {
     }
     .final-score .buttons button {
         width:150px !important;
+        font-size: 12px;
     }
     .final-score #finish-result span {
         font-size: 12px;
