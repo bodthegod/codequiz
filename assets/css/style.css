@@ -460,7 +460,6 @@ footer #next-q-button:hover {
 
 @media screen and (max-width: 700px) {
     body {
-        background: rgb(122, 224, 255);
         width:100vw;
         font-size: 15px;
     }
@@ -483,6 +482,7 @@ footer #next-q-button:hover {
         pointer-events: none;
         transform: translate(-50%, -50%);
         box-shadow: 0 0 20px #4fd821;
+        margin: auto;
     }
     .game-area header {
         height:80px;
@@ -495,13 +495,12 @@ footer #next-q-button:hover {
         padding-right: 2px;
         margin: 10px;
     }
-
     .game-area header #time #timer-icon {
         font-size: 12px;
         padding-right: 2px;
     }
     .game-area #question-display {
-        font-size: 15px !important;
+        font-size: 20px !important;
     }
     .game-area #answer-select {
         padding: 10px 0;
@@ -509,7 +508,7 @@ footer #next-q-button:hover {
     .game-area #answer-select .answer{
         padding: 5px 10px !important;
         margin-bottom: 5px!important;
-        font-size: 10px!important;
+        font-size: 15px!important;
         align-items: center!important;
         justify-content: space-between!important;
     }
@@ -528,12 +527,25 @@ footer #next-q-button:hover {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin:auto;
+        margin: auto;
     }
     .guide-box .guide-title{
         font-size:20px;
     }
     .final-score {
-        width:100%;
+        width:370px;
     }
+    .final-score .buttons button {
+        width:100px !important;
+    }
+    .final-score #finish-result span {
+        font-size: 12px;
+    }
+    #finish-icon {
+        font-size: 40px !important;
+    }
+    #finish-result {
+        font-size: 12px;
+    }
+    
 }
