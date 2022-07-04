@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cool coding website to test your coding skills with JS, CSS and HTML">
     <title>Bod Code Quiz</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -25,17 +26,15 @@
         </header>
         <div class="question-section">
             <!-- Question display area -->
-            <div id="question-display">
-            </div>
-            <div id="answer-select">
-            </div>
+            <div id="question-display"></div>
+            <div id="answer-select"></div>
         </div>
 
         <footer>
+            <!-- Progress bar -->
             <div class="progress-bar"></div>
-            <div id="question-count">
-                
-            </div>
+            <!-- Question of questions count -->
+            <div id="question-count"></div>
             <button id="next-q-button">Next</button>
         </footer>
     </div>
@@ -49,6 +48,7 @@
             <div class="guide">2: Your question will be <span>locked in</span> so make sure you are <span>certain</span> with your answer!</div>
             <div class="guide">3: Once completed, your score will be tallied up at <span>the end!</span></div>
         </div>
+        <!-- Guide buttons -->
         <div class="buttons">
             <button class="exit">Quit Game</button>
             <button class="restart">Continue Game</button>
@@ -62,12 +62,13 @@
         <div id="finish-title">You have finished the Quiz</div>
         <div id="finish-result">
         </div>
+        <!-- Final score buttons -->
         <div class="buttons">
             <button class="start-again">Start Again?</button>
             <button class="exit">Quit Game</button>
         </div>
     </div>
-    
+    <!-- script imports -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/qdata.js"></script>
 </body>
