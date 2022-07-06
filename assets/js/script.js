@@ -81,7 +81,6 @@ next_q.onclick = () => {
     } else {
         clearInterval(timer);
         clearInterval(progressTimer);
-        console.log("Finished Quiz!");
         displayFinalScore();
     }
 };
@@ -115,13 +114,10 @@ function answerChosen(option) {
     let allOptions = answer_select.children.length;
     if (userOption === rightOption) {
         finalScore += 1;
-        console.log(finalScore);
         option.classList.add("correct");
-        console.log("You got it right!");
         option.insertAdjacentHTML("beforeend", correctI);
     } else {
         option.classList.add("incorrect");
-        console.log("Wrong Answer");
         option.insertAdjacentHTML("beforeend", incorrectI);
     }
     // display correct answer upon incorrect choice
