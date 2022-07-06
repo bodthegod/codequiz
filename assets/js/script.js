@@ -10,20 +10,20 @@ const timer_count = game_area.querySelector("#time #timer-count");
 
 
 // start button onclick function
-btn_start.onclick = ()=>{
+btn_start.onclick = () => {
     guide_box.classList.add("showBox");
 };
 
 // exit button onclick function
-btn_exit.onclick = ()=>{
+btn_exit.onclick = () => {
     guide_box.classList.remove("showBox");
 };
 
 // continue button onclick function
-btn_continue.onclick = ()=>{
+btn_continue.onclick = () => {
     guide_box.classList.remove("showBox");
     game_area.classList.add("showGame");
-// calls displayQuestion function
+    // calls displayQuestion function
     displayQuestion(0);
     createQuestionCounter(1);
     timerStart(5);
@@ -45,11 +45,11 @@ const replay_game = final_score.querySelector(".final-score .buttons .start-agai
 const exit_game = final_score.querySelector(".final-score .buttons .exit");
 
 // exit game when clicked 
-exit_game.onclick = ()=>{
+exit_game.onclick = () => {
     window.location.reload();
 };
 // replay game when clicked 
-replay_game.onclick = ()=>{
+replay_game.onclick = () => {
     game_area.classList.add("showGame");
     final_score.classList.remove("showScore");
     question_counter = 0;
@@ -66,9 +66,9 @@ replay_game.onclick = ()=>{
     createQuestionCounter(question_integer);
 };
 
-next_q.onclick = ()=>{
-// increments question counter by +1
-    if(question_counter < qdata.length - 1){
+next_q.onclick = () => {
+    // increments question counter by +1
+    if (question_counter < qdata.length - 1) {
         question_counter++;
         question_integer++;
         displayQuestion(question_counter);
@@ -78,7 +78,7 @@ next_q.onclick = ()=>{
         clearInterval(progressTimer);
         progressTimerStart(progressStatus);
         next_q.style.display = "none";
-    }else{
+    } else {
         clearInterval(timer);
         clearInterval(progressTimer);
         console.log("Finished Quiz!");
@@ -87,14 +87,14 @@ next_q.onclick = ()=>{
 };
 
 //function to display questions
-function displayQuestion(index){
+function displayQuestion(index) {
     const question_display = document.querySelector("#question-display");
     // displays question text from qdata js file
-    let question_text = '<span>'+ qdata[index].qnumber + "." + qdata[index].qname + '</span>';
+    let question_text = '<span>' + qdata[index].qnumber + "." + qdata[index].qname + '</span>';
     // displays answers from qdata js file 
-    let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>'  + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>'
-                    + '<div class="answer">' + qdata[index].qselection[2] + '<span></span></div>'
-                    + '<div class="answer">' + qdata[index].qselection[3] + '<span></span></div>'; // Line breaks used to break up information
+    let answer_text = '<div class="answer">' + qdata[index].qselection[0] + '<span></span></div>' + '<div class="answer">' + qdata[index].qselection[1] + '<span></span></div>' +
+        '<div class="answer">' + qdata[index].qselection[2] + '<span></span></div>' +
+        '<div class="answer">' + qdata[index].qselection[3] + '<span></span></div>'; // Line breaks used to break up information
     question_display.innerHTML = question_text;
     answer_select.innerHTML = answer_text;
     const answer = answer_select.querySelectorAll(".answer");
@@ -107,26 +107,26 @@ let incorrectI = '<div class="incorrect-icon"><i class="fa-regular fa-circle-xma
 let correctI = '<div class="correct-icon"><i class="fa-regular fa-circle-check"></i></div>';
 
 // function to log correct and incorrect answers
-function answerChosen(option){
+function answerChosen(option) {
     clearInterval(timer);
     clearInterval(progressTimer);
     let userOption = option.textContent;
     let rightOption = qdata[question_counter].qanswer;
     let allOptions = answer_select.children.length;
-    if(userOption === rightOption){
+    if (userOption === rightOption) {
         finalScore += 1;
         console.log(finalScore);
         option.classList.add("correct");
         console.log("You got it right!");
         option.insertAdjacentHTML("beforeend", correctI);
-    }else{
+    } else {
         option.classList.add("incorrect");
         console.log("Wrong Answer");
         option.insertAdjacentHTML("beforeend", incorrectI);
     }
     // display correct answer upon incorrect choice
     for (let i = 0; i < allOptions; i++) {
-        if(answer_select.children[i].textContent == rightOption) {
+        if (answer_select.children[i].textContent == rightOption) {
             answer_select.children[i].setAttribute("class", "answer correct");
         }
     }
@@ -139,65 +139,64 @@ function answerChosen(option){
 }
 
 // creates innerhtml to display question counter
-function createQuestionCounter(index){
-const question_of_count = game_area.querySelector("#question-count");
-let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
-question_of_count.innerHTML = questionNumber;
+function createQuestionCounter(index) {
+    const question_of_count = game_area.querySelector("#question-count");
+    let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
+    question_of_count.innerHTML = questionNumber;
 }
 
-function timerStart(time){
+function timerStart(time) {
     timer = setInterval(timerCount, 1000);
-    function timerCount(){
+
+    function timerCount() {
         timer_count.textContent = time;
         time--;
-        if(time < 0){
+        if (time < 0) {
             clearInterval(timer);
             timer_count.textContent = "0";
 
             let rightOption = qdata[question_counter].qanswer;
             let allOptions = answer_select.children.length;
-        
+
             for (let i = 0; i < allOptions; i++) {
-                if(answer_select.children[i].textContent == rightOption) {
+                if (answer_select.children[i].textContent == rightOption) {
                     answer_select.children[i].setAttribute("class", "answer correct");
                 }
-                }
-                for (let i = 0; i < allOptions; i++) {
-                    answer_select.children[i].classList.add("muted");
-                }
-                next_q.style.display = "block";
             }
+            for (let i = 0; i < allOptions; i++) {
+                answer_select.children[i].classList.add("muted");
+            }
+            next_q.style.display = "block";
         }
     }
+}
 
-function displayFinalScore(){
+function displayFinalScore() {
     guide_box.classList.remove("showBox");
     game_area.classList.remove("showGame");
     final_score.classList.add("showScore");
     const final_score_num = final_score.querySelector("#finish-result");
-    if(finalScore > 8){
-        let scoreText = '<span>Great! You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
+    if (finalScore > 8) {
+        let scoreText = '<span>Great! You scored <p>' + finalScore + '</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
-    }
-    else if (finalScore > 5){
-        let scoreText = '<span>Good Job, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
+    } else if (finalScore > 5) {
+        let scoreText = '<span>Good Job, You scored <p>' + finalScore + '</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
-    }
-    else {
-        let scoreText = '<span>Nice try, You scored <p>'+ finalScore +'</p> out of <p>' + qdata.length + '</p></span>';
+    } else {
+        let scoreText = '<span>Nice try, You scored <p>' + finalScore + '</p> out of <p>' + qdata.length + '</p></span>';
         final_score_num.innerHTML = scoreText;
     }
 }
 
 
-function progressTimerStart(time){
+function progressTimerStart(time) {
     progressTimer = setInterval(timerCount, 9.25);
-    function timerCount(){
-        time +=1;
+
+    function timerCount() {
+        time += 1;
         progress_bar.style.width = time + "px";
-        if(time > 695){
+        if (time > 695) {
             clearInterval(progressTimer);
         }
     }
 }
-
