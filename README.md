@@ -22,6 +22,7 @@
     2. [CSS Validator Results](#css-results)
     3. [Lighthouse Reports](#lighthouse-reports)
     4. [Further Testing](#further-testing)
+    5. [Manual Testing](#manual-testing)
 5. [Bugs and fixes](#known-bugs)
 6. [Deployment](#deployment)
     1. [GitHub Pages](#github-pages)
@@ -260,31 +261,46 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 
 -   #### Frequent User Goals
 
-    1. As a Frequent User, I want to look for new workouts plans and new updates on the best gym movements recommended.
-        1. The user would already know how to navigate the website, and would go straight to the advice page to look for said information.
+    1. As a Frequent User, I want the ability to see my final score, as frequent visits would allow for higher scores.
+        1. The user will already know the final score is shown at the end of the quiz, and this would allow for replayability and personal bests.
 
-    2. As a Frequent User, I want to check regularly for supplements as they may change monthly.
-        1. As the user has visited the website and navigation is streamlined, they would click on the supplements link within the nagivation bar to see the cards which display these supplements.
+    2. As a Frequent User, I want to be able to check the quiz often in case there are new questions added or new features.
+        1. A frequent user will know how to navigate to the questions section, to allow them to see if new questions have been added. 
 
-    3. As a Frequent User, I want to have access to social links and contact details so that when my strength or routine changes, I can plan accordingly.
-        1. At the bottom of every page, the user can see three social links, which follow with the websites style within the footer.
-        2. The contact section can be used in order to submit for workout information, and the social links can also be used to get into contact and request information.
+    3. As a Frequent User, I want the option to see the time remaining as I could set faster scores.
+        1. The user is always displayed time remaining when playing the quiz, this counting down from 5 seconds on the top right of the screen.
+        2. The user is also displayed a progress bar that gradually fills up as the counter goes down, this giving a visual response for them to figure out how much time is remaining. 
 
 ### Further Testing
 
 -   I tested my website on many different screen sizes using the inspect element web tool, which allowed for me to test specific breakpoints and the layout on different hardware.
--   I tested my website on Google chrome and Safari, as these browsers interacted differently and I had to plan accordingly by editing features for IOS (my parallax).
--   I had tested every single page and link to ensure they were all functioning correctly, and redirects the user to the correct area within the website.
--   I asked friends to give me a review of the website and possible tips they think I could improve on, and had them bug test it as well as myself.
+-   I tested my website on Google chrome and Safari, as these browsers interacted differently and I had to plan accordingly by editing features for IOS (The quiz box was different on IOS).
+-   I had tested all the box displays for mobile as the sizes were all required to be small enough for a phone screen.
+-   I allowed my friends to test and play the quiz in the middle of developing it, to allow me for any changes they think a user would require. This allowed me to make the quiz look better on mobile and easier on the eye.
+-   I tested my JS code by using console.log to find out if the code was functional and what parts were working. 
+-   I used Google Chrome Dev Tools to play around with css attributes to see a live display of the changes I made.
+
+### Manual Testing
+
+-    In this section, I will provide screenshots of tests I have done to ensure my project is fully functional with no bugs apparent to the user.
+
+[Start Button Test Screenshot](readmeimages/start-btn-ss.png) Here the screenshot is simple however the purpose of this button is extremely important to defining this websites use. The function of the button is to simply display the guide to the user and allow them to go from there. I tested this button by simply clicking it and allowing it to function. 
+
+[No Answer Selected Test Screenshot](readmeimages/manual-test-game1.png) This screenshot shows what the user is displayed when the timer runs out, I have tested this by allowing the timer to count down to 0- for me to see the results that occur. The results that occur from allowing this to happen are fully functional, showing: Correct answer displayed however no tick icon (as the user did not get it correct), counter stays at 0 and doesn't decrease into the negative numbers, progress bar reaches 100% of the game area, and the next button is displayed. 
+
+[Question Of Counter Test Screenshot](readmeimages/manual-test-game2.png) This screenshot tests if the question of number is functionable. I tested this by simply clicking the next button from the previous screenshot, with the result being 2 instead of one, due to the question being the second displayed.
+
+[Incorrect Answer Test Screenshot](readmeimages/game-box-active-ss.png) I tested the result of an incorrect answer by simply choosing one. The result expected is the incorrect answer to not add a number onto the final score and be displayed in red to signify incorrect.
+
+[Final Score Test Screenshot](readmeimages/final-score-ss.png) I have tested if the final score functions by going through the quiz and selecting some correct answers and some incorrect answers. This allowed me to test the functionality of the final score counter- as it would change depending on the user's score. Moreover, I had also tested wether this box was displayed after the 10th question, by clicking next on the final question, of which it was. 
+
+Furthermore, I tested the start again button by clicking it, of which restarted the counter and set the user back to the first question where all elements were displayed correctly. Finally, the quit game button also functions correctly and was tested by clicking it, and the result being taking the user back to the start button. 
 
 ### Known Bugs
 
--   On IOS the parallax image doesn't display correctly so I had to edit this to dispay as static, so I blurred the image and made the text visible over the static image.
--   There was a bug where my video wouldn't play, however I edited the size and positioning to fix this.
--   The images within the cards didn't show on the live site, and all that would show was the alt tags. In order to fix this, I changed the path of the images within the hyperlink.
--   The top hero image would stretch and display too big, and would stretch on mobile devices. To fix this, I changed the max-width.
--   The nav bar wouldn't function correctly on mobile, so I added the burger icon via bootstrap for ease of use.
--   There were many issues showing within the HTML validator, so I thoroughly fixed each and every bug, some of these being duplicate tags.
+-   When developing the quiz box to display on mobiles, the information presented was all clustered and I had to copy previous code I had created in the CSS to redefine the size, however this was a tedious bug that took me a couple of hours to figure out after playing around with Dev Tools.
+-   There was a bug where the progress bar was too big for the screen size, causing the game area box to stretch.
+-   I had another tedious bug where once the time was up on my game, the next button would not display. In order to fix this I had to play around with the JS and I figured out that when calling the function, I had used the incorrect name. This was an easy bug to fix after I had isolated the issue. 
 
 ## Deployment
 
