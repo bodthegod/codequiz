@@ -2,551 +2,583 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Source+Code+Pro:wght@500&display=swap');
 
 /* General styles for all content */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Chakra Petch', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 /* Background gradients and general colour in body */
 body {
-    background: linear-gradient(-45deg, #48c0ac, #73a128, #ebadad, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-	height: 100vh;
-    color:#4fd821;
-    width:100%;
+  background: linear-gradient(-45deg, #48c0ac, #73a128, #ebadad, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  color: #4fd821;
+  width: 100%;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
 
-    
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+
 }
 
 
-.btn-start, .guide-box, .game-area, .final-score{
-    transition: all 0.5s ease;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    margin:auto;
+.btn-start,
+.guide-box,
+.game-area,
+.final-score {
+  transition: all 0.5s ease;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: auto;
 }
 
 /* Start button styles */
 .btn-start button {
-    font-family:'Source Code Pro', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: #4fd821;
-    padding: 15px 40px;
-    background: black;
-    cursor: pointer;
-    border: 2px solid #4fd821;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #4fd821;
-    width:400px;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #4fd821;
+  padding: 15px 40px;
+  background: black;
+  cursor: pointer;
+  border: 2px solid #4fd821;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #4fd821;
+  width: 400px;
 }
+
 .btn-start button:hover {
-    transition: 0.5s ease;
-    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px #eee;
-    border: 2.5px solid white;
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px #eee;
+  border: 2.5px solid white;
 }
 
 /* Game area styles */
 .game-area {
-    width: 700px;
-    background:#111111;
-    border-radius: 15px;
-    border: 2px solid #4fd821;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px #4fd821;
+  width: 700px;
+  background: #111111;
+  border-radius: 15px;
+  border: 2px solid #4fd821;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #4fd821;
 }
+
 .game-area.showGame,
 .guide-box.showBox,
-.final-score.showScore{
-    pointer-events: auto;
-    opacity: 1;
-    z-index: 5;
-    transform: translate(-50%, -50%);
+.final-score.showScore {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 5;
+  transform: translate(-50%, -50%);
 }
 
 .game-area header {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    padding: 0px 40px;
-    border-bottom: 2.5px solid;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 10px 10px 0 0;
-    background:#111111;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  padding: 0px 40px;
+  border-bottom: 2.5px solid;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px 10px 0 0;
+  background: #111111;
 }
 
 .game-area header #game-title {
-    width: 300px;
-    height: 55px;
-    background:#2a2b2a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Source Code Pro', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 0 10px;
-    border: 2.5px solid #4fd821;
-    border-radius: 15px;
+  width: 300px;
+  height: 55px;
+  background: #2a2b2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 10px;
+  border: 2.5px solid #4fd821;
+  border-radius: 15px;
 }
 
 .game-area header #game-title i {
-    color:white;
+  color: white;
 }
 
 .game-area header #time {
-    height: 55px;
-    width: 250px;
-    padding: 0 10px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #2a2b2a;
-    border: 2.5px solid #4fd821;
+  height: 55px;
+  width: 250px;
+  padding: 0 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2a2b2a;
+  border: 2.5px solid #4fd821;
 }
 
 .game-area header #time #timer-icon {
-    user-select: none;
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
 }
+
 .game-area header #time #timer-count {
-    user-select: none;
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
-    background: #111111;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    text-align: center;
-    border-radius: 50%;
-    border: 2.5px solid white;
-    
+  user-select: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: #111111;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2.5px solid white;
+
 }
 
 .game-area .question-section {
-    padding: 30px;
-    background:#111111;
+  padding: 30px;
+  background: #111111;
 }
 
 .game-area .question-section #question-display {
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-    padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  padding: 10px;
 }
 
 .game-area .question-section #answer-select {
-     display: block;
-     padding: 10px 20px;
+  display: block;
+  padding: 10px 20px;
 }
 
 .game-area .question-section #answer-select .answer {
-    display: flex;
-    cursor: pointer;
-    background: #2a2b2a;
-    padding: 15px 15px;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 0.5s ease;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    border: 2.5px solid white;
+  display: flex;
+  cursor: pointer;
+  background: #2a2b2a;
+  padding: 15px 15px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  border: 2.5px solid white;
 }
 
 #answer-select .answer .correct-icon {
-    color: #4fd821;
+  color: #4fd821;
 }
 
 #answer-select .answer .incorrect-icon {
-    color: red;
+  color: red;
 }
 
 .game-area .question-section #answer-select .answer:hover {
-    transition: 0.5s ease;
-    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px #eee;
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px #eee;
 }
+
 /* correct answer styles */
 
 #answer-select .answer.correct {
-    transition: 0.5s ease;
-    background: linear-gradient(90deg, var(--c1, green), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px green;
-}
-/* incorrect answer styles */
-#answer-select .answer.incorrect {
-    transition: 0.5s ease;
-    background: linear-gradient(90deg, var(--c1, red), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px red;
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, var(--c1, green), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px green;
 }
 
-#answer-select .answer.muted{
-    pointer-events: none;
+/* incorrect answer styles */
+#answer-select .answer.incorrect {
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, var(--c1, red), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200% !important;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px red;
+}
+
+#answer-select .answer.muted {
+  pointer-events: none;
 }
 
 .game-area .question-section #answer-select:last-child {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 /* Game area footer styles */
 .game-area footer {
-    display: flex;
-    justify-content: space-evenly;
-    height: 120px;
-    width: 100%;
-    align-items: center;
-    padding: 0px;   
+  display: flex;
+  justify-content: space-evenly;
+  height: 120px;
+  width: 100%;
+  align-items: center;
+  padding: 0px;
 }
+
 .game-area footer .progress-bar {
-    position:absolute;
-    bottom: 120px;
-    left: 0px;
-    width: 50%;
-    height: 6px;
-    background: #4fd821;
+  position: absolute;
+  bottom: 120px;
+  left: 0px;
+  width: 50%;
+  height: 6px;
+  background: #4fd821;
 }
 
 .game-area footer #question-count span {
-    user-select: none;
-    display: flex;
-    font-family: 'Source Code Pro', sans-serif;
-    font-size: 25px;
+  user-select: none;
+  display: flex;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 25px;
 }
 
 footer #question-count span p {
-    color: white;
-    padding: 0 6px;
-    font-weight: 600;
-    font-size: 25px;
+  color: white;
+  padding: 0 6px;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 /* Next button */
 footer #next-q-button {
-    cursor: pointer;
-    background: #2a2b2a;
-    padding: 15px 15px;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.5s ease;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    border: 2.5px solid white;
-    color:white;
-    box-shadow: 0 0 20px #47b124;
-    display: none;
+  cursor: pointer;
+  background: #2a2b2a;
+  padding: 15px 15px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 2.5px solid white;
+  color: white;
+  box-shadow: 0 0 20px #47b124;
+  display: none;
 }
+
 footer #next-q-button:hover {
-    transition: 0.5s ease;
-    background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px #eee;
+  transition: 0.5s ease;
+  background: linear-gradient(90deg, var(--c1, #4fd821), var(--c2, #2a2b2a) 51%, var(--c1, #000000)) var(--x, 0)/ 200%;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px #eee;
 }
 
 
 /* Guide box at start styles */
 .guide-box {
-    width: 700px;
-    background:#111111;
-    border-radius: 15px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px #4fd821;
+  width: 700px;
+  background: #111111;
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #4fd821;
 }
+
 /* Shows box when js onclick is active and specifies max stack order  */
 .guide-box.showBox {
-    pointer-events: auto;
-    opacity: 1;
-    z-index: 5;
-    transform: translate(-50%, -50%);
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 5;
+  transform: translate(-50%, -50%);
 }
 
 .guide-box .guide-title {
-    font-size: 35px;
-    font-weight: 400;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    padding: 10px 40px;
-    border-bottom: 2.5px solid;
-    align-items: center;
-    justify-content: center;
+  font-size: 35px;
+  font-weight: 400;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  padding: 10px 40px;
+  border-bottom: 2.5px solid;
+  align-items: center;
+  justify-content: center;
 }
 
 .guide-box .guide-list {
-    padding: 30px 40px;
+  padding: 30px 40px;
 }
 
 .guide-box .guide-list .guide {
-    margin: 5px 0px;
-    font-family: 'Source Code Pro', sans-serif;
-    font-size: large;
+  margin: 5px 0px;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: large;
 }
 
 .guide-box .guide-list .guide span {
-    color: white;
-    font-weight: 600;
-    text-decoration: underline 2px white;
+  color: white;
+  font-weight: 600;
+  text-decoration: underline 2px white;
 }
 
 .guide-box .buttons {
-    height: 70px;
-    display: flex;
-    padding: 10px 40px;
-    border-top: 2.5px solid;
-    align-items: center;
-    justify-content: center;
+  height: 70px;
+  display: flex;
+  padding: 10px 40px;
+  border-top: 2.5px solid;
+  align-items: center;
+  justify-content: center;
 }
 
 .guide-box .buttons button {
-    cursor: pointer;
-    height: 40px;
-    width: 400px;
-    margin: 10px 10px;
-    border: 2px solid #4fd821;
-    background: black;
-    border-radius: 10px;
-    color:#4fd821;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    font-size: 15px;
+  cursor: pointer;
+  height: 40px;
+  width: 400px;
+  margin: 10px 10px;
+  border: 2px solid #4fd821;
+  background: black;
+  border-radius: 10px;
+  color: #4fd821;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 15px;
 
 }
 
 
 .buttons button.exit {
-    color: red;
-    border: 2px solid red;
+  color: red;
+  border: 2px solid red;
 }
 
-.buttons button.restart:hover{
-    background:#47b124;
-    border:3px solid #47b124;
-    color:white;
+.buttons button.restart:hover {
+  background: #47b124;
+  border: 3px solid #47b124;
+  color: white;
 }
 
-.buttons button.exit:hover{
-    background:rgb(196, 19, 19);
-    border:3px solid rgb(196, 19, 19);
-    color:white;
+.buttons button.exit:hover {
+  background: rgb(196, 19, 19);
+  border: 3px solid rgb(196, 19, 19);
+  color: white;
 }
+
 /* End score results box  */
 .final-score {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 500px;
-    background:#111111;
-    justify-content: space-between;
-    border-radius: 15px;
-    border: 3px solid #4fd821;
-    padding: 30px 55px;
-    box-shadow: 0 0 20px #4fd821;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  background: #111111;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: 3px solid #4fd821;
+  padding: 30px 55px;
+  box-shadow: 0 0 20px #4fd821;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 .final-score #finish-icon {
-    color:white;
-    margin: 10px 10px;
-    font-size: 95px;
+  color: white;
+  margin: 10px 10px;
+  font-size: 95px;
 }
 
 .final-score #finish-icon span {
-    color:palevioletred;
-    font-size: 80px;
+  color: palevioletred;
+  font-size: 80px;
 }
 
 .final-score #finish-title {
-    color:white;
-    font-weight: 600;
-    font-size: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .final-score #finish-result span {
-    font-size: 15px;
-    display: flex;
-    margin: 10px 0;
-    font-family: 'Source Code Pro', sans-serif;
+  font-size: 15px;
+  display: flex;
+  margin: 10px 0;
+  font-family: 'Source Code Pro', sans-serif;
 }
 
 #finish-result span p {
-    font-family: 'Source Code Pro', sans-serif;
-    font-weight: 700;
-    color: white;
-    padding: 0px 6px;
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 700;
+  color: white;
+  padding: 0px 6px;
 }
 
 /* Final score box buttons with gradient styles and hover effects */
 .final-score .buttons button {
-    cursor: pointer;
-    height: 40px;
-    width: 400px;
-    margin: 10px 10px;
-    border: 2px solid #4fd821;
-    border-radius: 10px;
-    color:#4fd821;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    font-size: 15px;
+  cursor: pointer;
+  height: 40px;
+  width: 400px;
+  margin: 10px 10px;
+  border: 2px solid #4fd821;
+  border-radius: 10px;
+  color: #4fd821;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 15px;
 }
 
 .final-score .buttons .start-again {
-    border: 2px solid #47b124;
-    background: black;
-    color: #47b124;
+  border: 2px solid #47b124;
+  background: black;
+  color: #47b124;
 
 }
 
 .final-score .buttons .start-again:hover {
-    background:#47b124;
-    border:3px solid #47b124;
-    color:white;
+  background: #47b124;
+  border: 3px solid #47b124;
+  color: white;
 }
 
 .final-score .buttons .exit {
-    color: red;
-    border: 2px solid red;
-    background:black;
+  color: red;
+  border: 2px solid red;
+  background: black;
 }
 
 .final-score .buttons .exit:hover {
-    background:rgb(196, 19, 19);
-    border:3px solid rgb(196, 19, 19);
-    color:white;
+  background: rgb(196, 19, 19);
+  border: 3px solid rgb(196, 19, 19);
+  color: white;
 }
 
 /* media queries */
 
 @media screen and (max-width: 700px) {
-    body {
-        width:100vw;
-        font-size: 15px;
-    }
-    .btn-start button{
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        top: 50%;
-        left: 50%;
-        margin: auto;
-    }
-    .game-area {
-        width: 375px;
-        background:#111111;
-        border-radius: 15px;
-        border: 2px solid #4fd821;
-        opacity: 0;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 20px #4fd821;
-        margin: auto;
-    }
-    .game-area header {
-        height:80px;
-        width:370px;
-        z-index: 1;
-        font-size: 15px;
-    }
-    .game-area header #game-title {
-        font-size: 12px;
-        padding-right: 2px;
-        margin: 10px;
-    }
-    .game-area header #time #timer-icon {
-        font-size: 12px;
-        padding-right: 2px;
-    }
-    .game-area #question-display {
-        font-size: 20px !important;
-    }
-    .game-area #answer-select {
-        padding: 10px 0;
-    }
-    .game-area #answer-select .answer{
-        padding: 5px 10px !important;
-        margin-bottom: 5px!important;
-        font-size: 15px!important;
-        align-items: center!important;
-        justify-content: space-between!important;
-    }
-    .game-area footer {
-        font-size: 15px;
-    }
-    footer .progress-bar {
-        display: none;
-    }
-    .guide-box{
-        width: 100%;
-        height: 500px;
-        font-size: 15px;
-    }
-    .guide-box.showBox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: auto;
-    }
-    .guide-box .guide-title{
-        font-size:20px;
-    }
-    .final-score {
-        width:370px;
-    }
-    .final-score .buttons button {
-        width:150px !important;
-        font-size: 12px;
-    }
-    .final-score #finish-result span {
-        font-size: 12px;
-    }
-    #finish-icon {
-        font-size: 40px !important;
-    }
-    #finish-result {
-        font-size: 12px;
-    }
-    
+  body {
+    width: 100vw;
+    font-size: 15px;
+  }
+
+  .btn-start button {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+  }
+
+  .game-area {
+    width: 375px;
+    background: #111111;
+    border-radius: 15px;
+    border: 2px solid #4fd821;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px #4fd821;
+    margin: auto;
+  }
+
+  .game-area header {
+    height: 80px;
+    width: 370px;
+    z-index: 1;
+    font-size: 15px;
+  }
+
+  .game-area header #game-title {
+    font-size: 12px;
+    padding-right: 2px;
+    margin: 10px;
+  }
+
+  .game-area header #time #timer-icon {
+    font-size: 12px;
+    padding-right: 2px;
+  }
+
+  .game-area #question-display {
+    font-size: 20px !important;
+  }
+
+  .game-area #answer-select {
+    padding: 10px 0;
+  }
+
+  .game-area #answer-select .answer {
+    padding: 5px 10px !important;
+    margin-bottom: 5px !important;
+    font-size: 15px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .game-area footer {
+    font-size: 15px;
+  }
+
+  footer .progress-bar {
+    display: none;
+  }
+
+  .guide-box {
+    width: 100%;
+    height: 500px;
+    font-size: 15px;
+  }
+
+  .guide-box.showBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+  }
+
+  .guide-box .guide-title {
+    font-size: 20px;
+  }
+
+  .final-score {
+    width: 370px;
+  }
+
+  .final-score .buttons button {
+    width: 150px !important;
+    font-size: 12px;
+  }
+
+  .final-score #finish-result span {
+    font-size: 12px;
+  }
+
+  #finish-icon {
+    font-size: 40px !important;
+  }
+
+  #finish-result {
+    font-size: 12px;
+  }
+
 }
