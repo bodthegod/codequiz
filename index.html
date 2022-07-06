@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cool coding website to test your coding skills with JS, CSS and HTML">
-    <title>Bod Code Quiz</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/ed532fafaf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Button to start the Quiz -->
-    <div class="btn-start"><button>Click Here to Start Coding Quiz</button></div>
-    <div class="game-area">
-        <header>
-            <div id="game-title">Bod's Pro Coding Quiz<i class="fa-solid fa-code"></i></div>
-            <div id="time">
-                <div id="timer-icon"><i class="fa-regular fa-clock"></i> Remaining </div>
-                <div id="timer-count">5</div>
-            </div>
-        </header>
-        <div class="question-section">
-            <!-- Question display area -->
-            <div id="question-display"></div>
-            <div id="answer-select"></div>
-        </div>
 
-        <footer>
-            <!-- Progress bar -->
-            <div class="progress-bar"></div>
-            <!-- Question of questions count -->
-            <div id="question-count"></div>
-            <button id="next-q-button">Next</button>
-        </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool coding website to test your coding skills with JS, CSS and HTML">
+  <title>Bod Code Quiz</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/ed532fafaf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Button to start the Quiz -->
+  <div class="btn-start"><button>Click Here to Start Coding Quiz</button></div>
+  <div class="game-area">
+    <header>
+      <div id="game-title">Bod's Pro Coding Quiz<i class="fa-solid fa-code"></i></div>
+      <div id="time">
+        <div id="timer-icon"><i class="fa-regular fa-clock"></i> Remaining </div>
+        <div id="timer-count">5</div>
+      </div>
+    </header>
+    <div class="question-section">
+      <!-- Question display area -->
+      <div id="question-display"></div>
+      <div id="answer-select"></div>
     </div>
-    <!-- Guide area -->
-    <div class="guide-box">
-        <div class="guide-title">
-            <span>A Quick Guide Before You Start</span>
-        </div>
-        <div class="guide-list">
-            <div class="guide">1: A coding question will be displayed and you are only <span>allowed 5 seconds</span> to choose an answer.</div>
-            <div class="guide">2: Your question will be <span>locked in</span> so make sure you are <span>certain</span> with your answer!</div>
-            <div class="guide">3: Once completed, your score will be tallied up at <span>the end!</span></div>
-        </div>
-        <!-- Guide buttons -->
-        <div class="buttons">
-            <button class="exit">Quit Game</button>
-            <button class="restart">Continue Game</button>
-        </div>
+
+    <footer>
+      <!-- Progress bar -->
+      <div class="progress-bar"></div>
+      <!-- Question of questions count -->
+      <div id="question-count"></div>
+      <button id="next-q-button">Next</button>
+    </footer>
+  </div>
+  <!-- Guide area -->
+  <div class="guide-box">
+    <div class="guide-title">
+      <span>A Quick Guide Before You Start</span>
     </div>
-    <!-- Final score area -->
-    <div class="final-score">
-        <div id="finish-icon">
-            <span><i class="fa-solid fa-cake-candles"></i></span><i class="fa-solid fa-flag-checkered"></i><span><i class="fa-solid fa-cake-candles"></i></span>
-        </div>
-        <div id="finish-title">You have finished the Quiz</div>
-        <div id="finish-result">
-        </div>
-        <!-- Final score buttons -->
-        <div class="buttons">
-            <button class="start-again">Start Again?</button>
-            <button class="exit">Quit Game</button>
-        </div>
+    <div class="guide-list">
+      <div class="guide">1: A coding question will be displayed and you are only <span>allowed 5 seconds</span> to
+        choose an answer.</div>
+      <div class="guide">2: Your question will be <span>locked in</span> so make sure you are <span>certain</span> with
+        your answer!</div>
+      <div class="guide">3: Once completed, your score will be tallied up at <span>the end!</span></div>
     </div>
-    <!-- Script imports -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/qdata.js"></script>
+    <!-- Guide buttons -->
+    <div class="buttons">
+      <button class="exit">Quit Game</button>
+      <button class="restart">Continue Game</button>
+    </div>
+  </div>
+  <!-- Final score area -->
+  <div class="final-score">
+    <div id="finish-icon">
+      <span><i class="fa-solid fa-cake-candles"></i></span><i class="fa-solid fa-flag-checkered"></i><span><i
+          class="fa-solid fa-cake-candles"></i></span>
+    </div>
+    <div id="finish-title">You have finished the Quiz</div>
+    <div id="finish-result">
+    </div>
+    <!-- Final score buttons -->
+    <div class="buttons">
+      <button class="start-again">Start Again?</button>
+      <button class="exit">Quit Game</button>
+    </div>
+  </div>
+  <!-- Script imports -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/qdata.js"></script>
 </body>
+
 </html>
