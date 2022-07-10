@@ -357,7 +357,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   Credits to my mentor Darío for encouraging me to continue to add things to improve my project.
 -   Credits to this website for information regarding javascript [W3 Schools](https://www.w3schools.com/js/js_if_else.asp)
 -   For design inspiration, I used [Scheme Color](https://www.schemecolor.com/matrix-code-green.php)
--   For early inspiration of the website I followed [This Youtube Video](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+-   For early inspiration of the website I followed [Brian Design on Youtube](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
 -   For arrow functions, I used [W3 Schools](https://www.w3schools.com/js/js_arrow_function.asp)
 -   For more design inspiration, I used [Coding Nepal](https://www.codingnepalweb.com/quiz-app-with-timer-javascript/)
      

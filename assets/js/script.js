@@ -1,3 +1,5 @@
+// Inspiration of all code structure taken from Coding Nepal in README
+// Inspiration of general layout of project taken from Brian Design in README
 // setting up all objects
 const btn_start = document.querySelector(".btn-start button");
 const guide_box = document.querySelector(".guide-box");
@@ -140,7 +142,7 @@ function createQuestionCounter(index) {
     let questionNumber = '<span><p>' + index + '</p>Out of<p>' + qdata.length + '</p></span>';
     question_of_count.innerHTML = questionNumber;
 }
-
+// Inspiration of timer taken from educative.io
 function timerStart(time) {
     timer = setInterval(timerCount, 1000);
 
@@ -184,7 +186,7 @@ function displayFinalScore() {
     }
 }
 
-
+// Inspiration of timer taken from educative.io
 function progressTimerStart(time) {
     progressTimer = setInterval(timerCount, 9.25);
 
